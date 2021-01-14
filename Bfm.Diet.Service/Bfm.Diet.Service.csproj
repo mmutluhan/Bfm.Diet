@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bfm.Diet.Authorization\Bfm.Diet.Authorization.csproj" />
+    <ProjectReference Include="..\Bfm.Diet.Core\Bfm.Diet.Core.csproj" />
+    <ProjectReference Include="..\Bfm.Diet.Dto\Bfm.Diet.Dto.csproj" />
+    <ProjectReference Include="..\Bfm.Diet.Model\Bfm.Diet.Model.csproj" />
+  </ItemGroup>
+
+
+</Project>

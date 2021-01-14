@@ -1,0 +1,15 @@
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.AssemblyInfoInputs.cache
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.AssemblyInfo.cs
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.csproj.CoreCompileInputs.cache
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\bin\Debug\net5.0\Bfm.Diet.Core.deps.json
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\bin\Debug\net5.0\Bfm.Diet.Core.runtimeconfig.json
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\bin\Debug\net5.0\Bfm.Diet.Core.runtimeconfig.dev.json
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\bin\Debug\net5.0\Bfm.Diet.Core.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\bin\Debug\net5.0\ref\Bfm.Diet.Core.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\bin\Debug\net5.0\Bfm.Diet.Core.pdb
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\ref\Bfm.Diet.Core.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.pdb
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.genruntimeconfig.cache
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.csprojAssemblyReference.cache

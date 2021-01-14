@@ -1,0 +1,17 @@
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\bin\Debug\net5.0\Bfm.Diet.Dto.deps.json
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\bin\Debug\net5.0\Bfm.Diet.Dto.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\bin\Debug\net5.0\ref\Bfm.Diet.Dto.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\bin\Debug\net5.0\Bfm.Diet.Dto.pdb
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\obj\Debug\net5.0\Bfm.Diet.Dto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\obj\Debug\net5.0\Bfm.Diet.Dto.AssemblyInfoInputs.cache
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\obj\Debug\net5.0\Bfm.Diet.Dto.AssemblyInfo.cs
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\obj\Debug\net5.0\Bfm.Diet.Dto.csproj.CoreCompileInputs.cache
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\obj\Debug\net5.0\Bfm.Diet.Dto.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\obj\Debug\net5.0\ref\Bfm.Diet.Dto.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\obj\Debug\net5.0\Bfm.Diet.Dto.pdb
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\obj\Debug\net5.0\Bfm.Diet.Dto.csprojAssemblyReference.cache
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\bin\Debug\net5.0\Bfm.Diet.Core.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\bin\Debug\net5.0\Bfm.Diet.Core.pdb
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\obj\Debug\net5.0\Bfm.Diet.Dto.csproj.CopyComplete
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\bin\Debug\net5.0\Bfm.Diet.Authorization.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Dto\bin\Debug\net5.0\Bfm.Diet.Authorization.pdb

@@ -1,0 +1,417 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj",
+        "projectName": "Bfm.Diet.Authorization",
+        "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj",
+        "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Authorization\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
+                "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj",
+        "projectName": "Bfm.Diet.Core",
+        "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj",
+        "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "Autofac.Extras.DynamicProxy": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Serialize.Linq": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj",
+        "projectName": "Bfm.Diet.Dto",
+        "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj",
+        "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Dto\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj": {
+                "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj"
+              },
+              "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
+                "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj",
+        "projectName": "Bfm.Diet.Model",
+        "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj",
+        "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
+                "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj",
+        "projectName": "Bfm.Diet.Service",
+        "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj",
+        "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj": {
+                "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj"
+              },
+              "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
+                "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
+              },
+              "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj": {
+                "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj"
+              },
+              "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj": {
+                "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

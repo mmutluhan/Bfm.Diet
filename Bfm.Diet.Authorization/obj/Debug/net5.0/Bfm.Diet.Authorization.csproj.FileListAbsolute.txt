@@ -1,0 +1,15 @@
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\obj\Debug\net5.0\Bfm.Diet.Authorization.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\obj\Debug\net5.0\Bfm.Diet.Authorization.AssemblyInfoInputs.cache
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\obj\Debug\net5.0\Bfm.Diet.Authorization.AssemblyInfo.cs
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\obj\Debug\net5.0\Bfm.Diet.Authorization.csproj.CoreCompileInputs.cache
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\bin\Debug\net5.0\Bfm.Diet.Authorization.deps.json
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\bin\Debug\net5.0\Bfm.Diet.Authorization.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\bin\Debug\net5.0\ref\Bfm.Diet.Authorization.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\bin\Debug\net5.0\Bfm.Diet.Authorization.pdb
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\bin\Debug\net5.0\Bfm.Diet.Core.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\bin\Debug\net5.0\Bfm.Diet.Core.pdb
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\obj\Debug\net5.0\Bfm.Diet.Authorization.csprojAssemblyReference.cache
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\obj\Debug\net5.0\Bfm.Diet.Authorization.csproj.CopyComplete
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\obj\Debug\net5.0\Bfm.Diet.Authorization.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\obj\Debug\net5.0\ref\Bfm.Diet.Authorization.dll
+C:\Users\Mali\Desktop\Bfm\Bfm.Diet.Authorization\obj\Debug\net5.0\Bfm.Diet.Authorization.pdb
