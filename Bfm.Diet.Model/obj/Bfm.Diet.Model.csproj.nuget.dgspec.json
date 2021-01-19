@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj": {}
+    "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
+    "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj",
+        "projectUniqueName": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj",
         "projectName": "Bfm.Diet.Core",
-        "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj",
-        "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\obj\\",
+        "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj",
+        "packagesPath": "C:\\Users\\dtmmutluhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dtmmutluhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -121,24 +121,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj": {
+    "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj",
+        "projectUniqueName": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj",
         "projectName": "Bfm.Diet.Model",
-        "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj",
-        "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Model\\obj\\",
+        "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj",
+        "packagesPath": "C:\\Users\\dtmmutluhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dtmmutluhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -152,8 +152,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
-                "projectPath": "C:\\Users\\Mali\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
+              "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
+                "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
               }
             }
           }
@@ -188,7 +188,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

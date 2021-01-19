@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using Bfm.Diet.Core.Base;
 
 namespace Bfm.Diet.Core.Extensions
 {
@@ -47,19 +46,6 @@ namespace Bfm.Diet.Core.Extensions
             if (exp.Expression is MemberExpression)
                 return GetValue((MemberExpression) exp.Expression);
             throw new NotImplementedException();
-        }
-
-        public static Expression<Func<TEntity, bool>> UnboxExpression<TEntity>(this object source) 
-        {
-            var parameter = Expression.Parameter(typeof(object), "input");
-
-            var cast = Expression.TypeAs(Expression.Convert(parameter, source.GetType()), typeof(object));
-
-            var lambda = Expression.Lambda<Func<TEntity, bool>>(cast, parameter);
-
-            var func = lambda.Compile();
-
-            return  func(source);
         }
     }
 }

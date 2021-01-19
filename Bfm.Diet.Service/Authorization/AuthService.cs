@@ -45,7 +45,7 @@ namespace Bfm.Diet.Service.Authorization
 
             #endregion
 
-            var result = _userService.FirstOrDefault(u => u.Email == loginUser.Kullanici);
+            var result = _userService.FirstOrDefault(u => u.Email == loginUser.Kullanici && u.Durum && u.Adi=="Mehmet Ali" && u.Soyadi == "Mutluhan" );
             if (result == null)
                 throw new ApplicationException(Error.UserNotFound);
 

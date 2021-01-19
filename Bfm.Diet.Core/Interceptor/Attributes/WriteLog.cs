@@ -1,13 +1,7 @@
-﻿using System;
-using System.Linq.Expressions;
-using Bfm.Diet.Core.Dependency;
-using Bfm.Diet.Core.Json;
+﻿using Bfm.Diet.Core.Dependency;
 using Castle.DynamicProxy;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using Serialize.Linq.Serializers;
-using JsonSerializer = Serialize.Linq.Serializers.JsonSerializer;
 
 namespace Bfm.Diet.Core.Interceptor.Attributes
 {
@@ -22,7 +16,7 @@ namespace Bfm.Diet.Core.Interceptor.Attributes
         }
 
         private string MethodLog(IInvocation invocation)
-        { 
+        {
             return $"{invocation.TargetType.FullName}.{invocation.Method.Name}()";
         }
     }
