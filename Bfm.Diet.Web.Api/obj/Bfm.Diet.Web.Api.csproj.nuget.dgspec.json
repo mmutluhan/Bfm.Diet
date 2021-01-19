@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Web.Api\\Bfm.Diet.Web.Api.csproj": {}
+    "C:\\projects\\Bfm\\Bfm.Diet.Web.Api\\Bfm.Diet.Web.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj": {
+    "C:\\projects\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj",
+        "projectUniqueName": "C:\\projects\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj",
         "projectName": "Bfm.Diet.Authorization",
-        "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj",
-        "packagesPath": "C:\\Users\\dtmmutluhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Authorization\\obj\\",
+        "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj",
+        "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\Bfm\\Bfm.Diet.Authorization\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dtmmutluhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +31,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
-                "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
+              "C:\\projects\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
+                "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
               }
             }
           }
@@ -67,24 +67,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
+    "C:\\projects\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj",
+        "projectUniqueName": "C:\\projects\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj",
         "projectName": "Bfm.Diet.Core",
-        "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj",
-        "packagesPath": "C:\\Users\\dtmmutluhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\obj\\",
+        "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj",
+        "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\Bfm\\Bfm.Diet.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dtmmutluhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -188,24 +188,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj": {
+    "C:\\projects\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj",
+        "projectUniqueName": "C:\\projects\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj",
         "projectName": "Bfm.Diet.Dto",
-        "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj",
-        "packagesPath": "C:\\Users\\dtmmutluhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Dto\\obj\\",
+        "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj",
+        "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\Bfm\\Bfm.Diet.Dto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dtmmutluhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -219,11 +219,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj": {
-                "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj"
+              "C:\\projects\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj": {
+                "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj"
               },
-              "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
-                "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
+              "C:\\projects\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
+                "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
               }
             }
           }
@@ -269,24 +269,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj": {
+    "C:\\projects\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj",
+        "projectUniqueName": "C:\\projects\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj",
         "projectName": "Bfm.Diet.Model",
-        "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj",
-        "packagesPath": "C:\\Users\\dtmmutluhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Model\\obj\\",
+        "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj",
+        "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\Bfm\\Bfm.Diet.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dtmmutluhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -300,8 +300,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
-                "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
+              "C:\\projects\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
+                "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
               }
             }
           }
@@ -336,24 +336,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj": {
+    "C:\\projects\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj",
+        "projectUniqueName": "C:\\projects\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj",
         "projectName": "Bfm.Diet.Service",
-        "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj",
-        "packagesPath": "C:\\Users\\dtmmutluhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Service\\obj\\",
+        "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj",
+        "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\Bfm\\Bfm.Diet.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dtmmutluhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -367,17 +367,17 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj": {
-                "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj"
+              "C:\\projects\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj": {
+                "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Authorization\\Bfm.Diet.Authorization.csproj"
               },
-              "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
-                "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
+              "C:\\projects\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
+                "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
               },
-              "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj": {
-                "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj"
+              "C:\\projects\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj": {
+                "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj"
               },
-              "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj": {
-                "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj"
+              "C:\\projects\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj": {
+                "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Model\\Bfm.Diet.Model.csproj"
               }
             }
           }
@@ -409,24 +409,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Web.Api\\Bfm.Diet.Web.Api.csproj": {
+    "C:\\projects\\Bfm\\Bfm.Diet.Web.Api\\Bfm.Diet.Web.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Web.Api\\Bfm.Diet.Web.Api.csproj",
+        "projectUniqueName": "C:\\projects\\Bfm\\Bfm.Diet.Web.Api\\Bfm.Diet.Web.Api.csproj",
         "projectName": "Bfm.Diet.Web.Api",
-        "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Web.Api\\Bfm.Diet.Web.Api.csproj",
-        "packagesPath": "C:\\Users\\dtmmutluhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Web.Api\\obj\\",
+        "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Web.Api\\Bfm.Diet.Web.Api.csproj",
+        "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\Bfm\\Bfm.Diet.Web.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dtmmutluhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -440,14 +440,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
-                "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
+              "C:\\projects\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj": {
+                "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Core\\Bfm.Diet.Core.csproj"
               },
-              "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj": {
-                "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj"
+              "C:\\projects\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj": {
+                "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Dto\\Bfm.Diet.Dto.csproj"
               },
-              "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj": {
-                "projectPath": "C:\\Users\\dtmmutluhan\\Desktop\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj"
+              "C:\\projects\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj": {
+                "projectPath": "C:\\projects\\Bfm\\Bfm.Diet.Service\\Bfm.Diet.Service.csproj"
               }
             }
           }
@@ -517,7 +517,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
