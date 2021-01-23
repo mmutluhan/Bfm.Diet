@@ -12,8 +12,9 @@ services:
       - "./redis/redis.conf:/usr/local/etc/redis/redis.conf"
 
     networks:
-      node_net:
-        ipv4_address: 172.20.0.20
+      bfm_network:
+        ipv4_address: 172.40.0.20
+        
   elasticsearch:  
    container_name: elasticsearch  
    image: elasticsearch:7.10.1  
@@ -27,7 +28,8 @@ services:
     - "ES_JAVA_OPTS=-Xms512m -Xmx512m"  
     - discovery.type=single-node  
    networks:  
-    - elastic  
+     bfm_network:
+       ipv4_address: 172.40.0.30 
   
   kibana:  
    container_name: kibana  
@@ -39,17 +41,21 @@ services:
    environment:  
     - ELASTICSEARCH_URL=http://localhost:9200  
    networks:  
-    - elastic  
+    bfm_network:
+       ipv4_address: 172.40.0.40 
     
   bfm.diet.web.api:
-    image: ${DOCKER_REGISTRY-}bfmdietwebapi
+    image: bfmdietwebapi
     build:
       context: .
       dockerfile: Bfm.Diet.Web.Api/Dockerfile
-
-networks:  
-  elastic:  
-    driver: bridge  
   
 volumes:  
   elasticsearch-data:  
+  
+networks:
+  bfm_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.40.0.0/16
