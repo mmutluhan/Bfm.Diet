@@ -49,6 +49,8 @@ services:
     build:
       context: .
       dockerfile: Bfm.Diet.Web.Api/Dockerfile
+    networks: 
+      - bfm_network
             
 volumes:  
   elasticsearch-data:  
