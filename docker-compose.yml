@@ -49,7 +49,7 @@ services:
     build:
       context: .
       dockerfile: Bfm.Diet.Web.Api/Dockerfile
-  
+            
 volumes:  
   elasticsearch-data:  
   
