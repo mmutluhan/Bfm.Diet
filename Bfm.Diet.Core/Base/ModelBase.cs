@@ -3,12 +3,11 @@ using System.Collections.Generic;
 
 namespace Bfm.Diet.Core.Base
 {
-    public abstract class ModelBase<TPrimaryKey> : IEntity<TPrimaryKey>
+    public abstract class ModelBase<TPrimaryKey> : IEntity<TPrimaryKey>, ICreationAuditableEntity,
+        IUpdateAuditableEntity
     {
         public virtual DateTime? KayitTarihi { get; set; }
         public virtual int? Kaydeden { get; set; }
-        public virtual DateTime? GuncellemeTarihi { get; set; }
-        public virtual int? Guncelleyen { get; set; }
         public virtual TPrimaryKey Id { get; set; }
 
         public virtual bool IsTransient()
@@ -21,5 +20,8 @@ namespace Bfm.Diet.Core.Base
 
             return false;
         }
+
+        public virtual DateTime? GuncellemeTarihi { get; set; }
+        public virtual int? Guncelleyen { get; set; }
     }
 }

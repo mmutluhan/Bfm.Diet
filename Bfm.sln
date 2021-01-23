@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bfm.Diet.Web.Api", "Bfm.Die
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bfm.Diet.Model", "Bfm.Diet.Model\Bfm.Diet.Model.csproj", "{4D2A5BF6-437A-4778-9049-D8582999194B}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C9385F31-3254-445F-95E2-F8D75AA166DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,18 @@ Global
 		{4D2A5BF6-437A-4778-9049-D8582999194B}.Release|x64.Build.0 = Release|Any CPU
 		{4D2A5BF6-437A-4778-9049-D8582999194B}.Release|x86.ActiveCfg = Release|Any CPU
 		{4D2A5BF6-437A-4778-9049-D8582999194B}.Release|x86.Build.0 = Release|Any CPU
+		{C9385F31-3254-445F-95E2-F8D75AA166DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9385F31-3254-445F-95E2-F8D75AA166DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9385F31-3254-445F-95E2-F8D75AA166DA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C9385F31-3254-445F-95E2-F8D75AA166DA}.Debug|x64.Build.0 = Debug|Any CPU
+		{C9385F31-3254-445F-95E2-F8D75AA166DA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C9385F31-3254-445F-95E2-F8D75AA166DA}.Debug|x86.Build.0 = Debug|Any CPU
+		{C9385F31-3254-445F-95E2-F8D75AA166DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9385F31-3254-445F-95E2-F8D75AA166DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9385F31-3254-445F-95E2-F8D75AA166DA}.Release|x64.ActiveCfg = Release|Any CPU
+		{C9385F31-3254-445F-95E2-F8D75AA166DA}.Release|x64.Build.0 = Release|Any CPU
+		{C9385F31-3254-445F-95E2-F8D75AA166DA}.Release|x86.ActiveCfg = Release|Any CPU
+		{C9385F31-3254-445F-95E2-F8D75AA166DA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

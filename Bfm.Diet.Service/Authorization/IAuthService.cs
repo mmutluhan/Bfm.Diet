@@ -6,7 +6,7 @@ namespace Bfm.Diet.Service.Authorization
 {
     public interface IAuthService
     {
-        KullaniciDto Login(LoginUserDto loginUser);
+        Task<KullaniciDto> Login(LoginUserDto loginUser);
 
         KullaniciDto Register(KullaniciKayitDto kullanici);
         Task<KullaniciDto> RegisterAsync(KullaniciKayitDto kullanici);

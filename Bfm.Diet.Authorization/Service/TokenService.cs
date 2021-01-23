@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using Bfm.Diet.Authorization.Model;
@@ -19,7 +21,6 @@ namespace Bfm.Diet.Authorization.Service
             _tokenOptions = options.Value.TokenOptions;
         }
 
-        //[WriteLog(Priority = 1)]
         public AccessToken CreateToken(Kullanici user)
         {
             var key = Encoding.ASCII.GetBytes(_tokenOptions.SecurityKey);
@@ -33,7 +34,8 @@ namespace Bfm.Diet.Authorization.Service
                 {
                     new Claim(ClaimTypes.Sid, user.Id.ToString()),
                     new Claim(ClaimTypes.Name, user.Adi),
-                    new Claim(ClaimTypes.Surname, user.Soyadi)
+                    new Claim(ClaimTypes.Surname, user.Soyadi),
+                    new Claim(ClaimTypes.Email, user.Email)
                 }),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
                     SecurityAlgorithms.HmacSha256Signature)

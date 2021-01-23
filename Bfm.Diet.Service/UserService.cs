@@ -1,38 +1,51 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Bfm.Diet.Authorization.Data;
 using Bfm.Diet.Authorization.Model;
 using Bfm.Diet.Core.EntityFrameworkCore;
 using Bfm.Diet.Core.EntityFrameworkCore.Repository;
-using Bfm.Diet.Core.Interceptor.Attributes;
 
 namespace Bfm.Diet.Service
 {
     public class UserService : EfGenericRepositoryBase<AuthorizationDbContext, Kullanici, int>, IUserService
     {
-        public UserService(IDbContextProvider<AuthorizationDbContext> dbContextProvider) : base(dbContextProvider)
+        private readonly IUnitOfWork<AuthorizationDbContext> _unitOfWork;
+
+        public UserService(IDbContextProvider<AuthorizationDbContext> dbContextProvider,
+            IUnitOfWork<AuthorizationDbContext> unitOfWork) : base(dbContextProvider)
         {
-        }
-        [WriteLog(Priority = 10)]
-        [CacheResults(Priority = 20, Lifetime = 25)]
-        public override List<Kullanici> GetAllList()
-        {
-            return base.GetAllList();
+            _unitOfWork = unitOfWork;
         }
 
-        [WriteLog(Priority = 10)]
-        [CacheResults(Priority = 20, Lifetime = 50)]
-        public override Kullanici FirstOrDefault(int id)
+
+        public override Kullanici Update(Kullanici entity)
         {
-            return base.FirstOrDefault(id);
+            using (_unitOfWork.BeginTransaction())
+            {
+                var kullanici = base.Update(entity);
+                _unitOfWork.Commit();
+                return kullanici;
+            }
         }
 
-        [WriteLog(Priority = 10)]
-        [CacheResults(Priority = 20, Lifetime = 50)]
-        public override Task<Kullanici> FirstOrDefaultAsync(int id)
+        public override async Task<Kullanici> UpdateAsync(Kullanici entity)
         {
-            return base.FirstOrDefaultAsync(id);
+            using (_unitOfWork.BeginTransactionAsync())
+            {
+                var kullanici = await base.UpdateAsync(entity);
+                await _unitOfWork.CommitAsync();
+                return kullanici;
+            }
         }
 
+
+        public Kullanici GetKullaniciByEMail(string email)
+        {
+            return base.FirstOrDefault(x => x.Email == email);
+        }
+
+        public Task<Kullanici> GetKullaniciByEMailAsync(string email)
+        {
+            return base.FirstOrDefaultAsync(x => x.Email == email);
+        }
     }
 }

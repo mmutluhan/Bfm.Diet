@@ -21,6 +21,7 @@ namespace Bfm.Diet.Core.Extensions
                         configuration.GetSection("AppSettings:ConnectionStrings:DefaultConnection").Value;
                     var optionsBuilder = new DbContextOptionsBuilder<TContext>(dbContextOptions)
                         .UseApplicationServiceProvider(serviceProvider)
+                        .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)
                         .UseNpgsql(connectionString);
 
                     return optionsBuilder.Options;

@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic; 
+﻿using System.Collections.Generic;
+using Bfm.Diet.Core.Attributes;
 using Bfm.Diet.Core.EntityFrameworkCore;
 using Bfm.Diet.Core.EntityFrameworkCore.Repository;
-using Bfm.Diet.Core.Interceptor.Attributes;
 using Bfm.Diet.Model;
 
 namespace Bfm.Diet.Service
@@ -10,11 +10,10 @@ namespace Bfm.Diet.Service
     {
         public SabitTanimService(IDbContextProvider<DietDbContext> dbContextProvider) : base(dbContextProvider)
         {
-
         }
 
-        [CacheResults(Priority = 10)]
-        [WriteLog(Priority = 0)]
+        [Cache(Lifetime = 60)]
+        [Log]
         public override List<SabitTanim> GetAllList()
         {
             return base.GetAllList();

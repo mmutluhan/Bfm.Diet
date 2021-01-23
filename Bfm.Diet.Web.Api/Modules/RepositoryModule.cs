@@ -9,9 +9,11 @@ namespace Bfm.Diet.Web.Api.Modules
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterGeneric(typeof(DbContextProvider<>)).As(typeof(IDbContextProvider<>));
-            builder.RegisterGeneric(typeof(EfGenericRepositoryBase<,>)).As(typeof(IRepository<>));
-
+            builder.RegisterGeneric(typeof(DbContextProvider<>)).As(typeof(IDbContextProvider<>))
+                .InstancePerLifetimeScope();
+            builder.RegisterGeneric(typeof(EfGenericRepositoryBase<,>)).As(typeof(IRepository<>))
+                .InstancePerLifetimeScope();
+            builder.RegisterGeneric(typeof(UnitOfWork<>)).As(typeof(IUnitOfWork<>)).InstancePerLifetimeScope();
 
             base.Load(builder);
         }

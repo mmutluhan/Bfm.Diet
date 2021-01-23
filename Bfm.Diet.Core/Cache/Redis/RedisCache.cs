@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Bfm.Diet.Core.Cache.Base;
 using Bfm.Diet.Core.Dependency;
 using Bfm.Diet.Core.Json;
@@ -12,11 +13,8 @@ namespace Bfm.Diet.Core.Cache.Redis
     public class RedisCache : CacheBase
     {
         private static Lazy<ConnectionMultiplexer> _redisConnection;
-
-       
-
         private readonly string _redisConnectionString;
-
+        private readonly bool _redisActive = true;
         private IOptions<AppSettings> _settings;
 
         public RedisCache(string name) : base(name)
@@ -28,12 +26,17 @@ namespace Bfm.Diet.Core.Cache.Redis
                     : Settings.Value.CacheSettings.RedisConnection;
 
                 if (_redisConnection == null)
-                {
-                    var configuration = ConfigurationOptions.Parse(_redisConnectionString, true);
-                    configuration.ResolveDns = true;
-                    _redisConnection =
-                        new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(configuration));
-                }
+                    try
+                    {
+                        var configuration = ConfigurationOptions.Parse(_redisConnectionString, true);
+                        configuration.ResolveDns = true;
+                        _redisConnection =
+                            new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(configuration));
+                    }
+                    catch (Exception)
+                    {
+                        _redisActive = false;
+                    }
             }
             catch
             {
@@ -56,17 +59,127 @@ namespace Bfm.Diet.Core.Cache.Redis
 
         public override object GetOrDefault(string key)
         {
-            var data = Cache.StringGet(key);
-            if (data.IsNullOrEmpty)
+            try
+            {
+                if (!_redisActive)
+                    return null;
+                var data = Cache.StringGet(key);
+                if (data.IsNullOrEmpty)
+                    return null;
+                var obj = JsonConvert.DeserializeObject(data.ToString(), SerializerSettings.BfmJsonSerializerSettings);
+                return obj;
+            }
+            catch (Exception)
+            {
                 return null;
-            return JsonConvert.DeserializeObject(data.ToString(), SerializerSettings.BfmJsonSerializerSettings);
+            }
         }
+
+        public override async Task<object> GetOrDefaultAsync(string key)
+        {
+            try
+            {
+                if (!_redisActive)
+                    return await Task.FromResult(default(object)).ConfigureAwait(false);
+
+                var data = await Cache.StringGetAsync(key);
+                if (data.IsNullOrEmpty)
+                    return await Task.FromResult(default(object)).ConfigureAwait(false);
+                var obj = JsonConvert.DeserializeObject(data.ToString(), SerializerSettings.BfmJsonSerializerSettings);
+                return await Task.FromResult(obj).ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
 
         public override void Set(string key, object value, TimeSpan? slidingExpireTime = null,
             TimeSpan? absoluteExpireTime = null)
         {
-            Cache.StringSet(key, JsonConvert.SerializeObject(value, SerializerSettings.BfmJsonSerializerSettings), TimeSpan.MaxValue);
+            if (!_redisActive)
+                return;
+            Cache.StringSet(key, JsonConvert.SerializeObject(value, SerializerSettings.BfmJsonSerializerSettings),
+                slidingExpireTime ?? DefaultSlidingExpireTime);
         }
+
+
+        public override void Set<T>(string key, object value, TimeSpan? slidingExpireTime = null,
+            TimeSpan? absoluteExpireTime = null)
+        {
+            if (!_redisActive)
+                return;
+            Cache.StringSet(key, JsonConvert.SerializeObject(value, SerializerSettings.BfmJsonSerializerSettings),
+                slidingExpireTime ?? DefaultSlidingExpireTime);
+        }
+
+        public override T GetOrAdd<T>(string key, Func<T> operation, int lifetime, bool refresh)
+        {
+            if (!_redisActive)
+                return default;
+
+            var item = Get<T>(key, false);
+            if (item == null || refresh)
+            {
+                item = operation.Invoke();
+                var cacheItem = JsonConvert.SerializeObject(item, SerializerSettings.BfmJsonSerializerSettings);
+                Set(key, cacheItem, TimeSpan.FromSeconds(lifetime));
+                return item;
+            }
+
+            return item;
+        }
+
+        public override T Get<T>(string key, bool remove)
+        {
+            if (!_redisActive)
+                return default;
+
+            var item = GetOrDefault(key);
+            if (item == null)
+                return default;
+
+            if (remove)
+                Remove(key);
+
+            return JsonConvert.DeserializeObject<T>(item.ToString(), SerializerSettings.BfmJsonSerializerSettings);
+        }
+
+        public override async Task<T> GetAsync<T>(string key, bool remove)
+        {
+            if (!_redisActive)
+                return await Task.FromResult(default(T)).ConfigureAwait(false);
+
+            var item = Get<T>(key, remove);
+            if (item == null)
+                return await Task.FromResult(default(T)).ConfigureAwait(false);
+
+            if (remove)
+                Remove(key);
+
+            var obj = JsonConvert.DeserializeObject<T>(item.ToString(),
+                SerializerSettings.BfmJsonSerializerSettings);
+            return await Task.FromResult(obj).ConfigureAwait(false);
+        }
+
+        public override async Task<T> GetOrAddAsync<T>(string key, Func<Task<T>> operation, int lifetime, bool refresh)
+        {
+            if (!_redisActive)
+                return await Task.FromResult(default(T)).ConfigureAwait(false);
+
+            var item = Get<T>(key, false);
+            if (item == null || refresh)
+            {
+                item = await operation.Invoke();
+                var cacheItem = JsonConvert.SerializeObject(item, SerializerSettings.BfmJsonSerializerSettings);
+                Set(key, cacheItem, TimeSpan.FromSeconds(lifetime));
+                return await Task.FromResult(item).ConfigureAwait(false);
+            }
+
+            return await Task.FromResult(item).ConfigureAwait(false);
+        }
+
 
         public override void Remove(string key)
         {

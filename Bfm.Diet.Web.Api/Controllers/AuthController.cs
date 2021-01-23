@@ -39,15 +39,15 @@ namespace Bfm.Diet.Web.Api.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login(LoginUserDto loginUserDto)
+        public async Task<IActionResult> Login(LoginUserDto loginUserDto)
         {
             try
             {
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var user = _authService.Login(loginUserDto);
-                var result = _authService.CreateAccessToken(user);
+                var user = await _authService.Login(loginUserDto);
+                var result = await _authService.CreateAccessTokenAsync(user);
                 if (string.IsNullOrEmpty(result.Token))
                     throw new ApplicationException(Error.TokenCreationError);
 

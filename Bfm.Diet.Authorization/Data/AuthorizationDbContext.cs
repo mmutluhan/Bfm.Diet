@@ -1,14 +1,19 @@
 ﻿using Bfm.Diet.Authorization.Model;
 using Bfm.Diet.Authorization.Model.Configuration;
 using Bfm.Diet.Core.Base;
+using Bfm.Diet.Core.Session;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bfm.Diet.Authorization.Data
 {
     public class AuthorizationDbContext : DbContextBase
     {
-        public AuthorizationDbContext(DbContextOptions<AuthorizationDbContext> options) : base(options)
+        private IBfmSessionInfo _sessionInfo;
+
+        public AuthorizationDbContext(DbContextOptions<AuthorizationDbContext> options, IBfmSessionInfo sessionInfo) :
+            base(options, sessionInfo)
         {
+            _sessionInfo = sessionInfo;
         }
 
         public DbSet<Kullanici> Users { get; set; }

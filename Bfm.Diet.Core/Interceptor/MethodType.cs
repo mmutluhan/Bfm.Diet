@@ -2,6 +2,7 @@
 {
     public enum MethodType
     {
+        Void,
         Synchronous,
         AsyncAction,
         AsyncFunction

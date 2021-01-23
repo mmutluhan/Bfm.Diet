@@ -12,6 +12,7 @@ using Bfm.Diet.Core.Logging;
 using Bfm.Diet.Core.Mapper;
 using Bfm.Diet.Core.Security;
 using Bfm.Diet.Core.Security.Jwt;
+using Bfm.Diet.Core.Serilog;
 using Bfm.Diet.Dto.Authorization.Validator;
 using Bfm.Diet.Dto.Mapper;
 using Bfm.Diet.Service;
@@ -28,6 +29,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
+using Serilog;
 
 namespace Bfm.Diet.Web.Api
 {
@@ -56,7 +58,7 @@ namespace Bfm.Diet.Web.Api
                     builder => builder.WithOrigins("http://localhost:3000"));
             });
 
-
+            services.AddHttpContextAccessor();
             services.AddAuthentication(x =>
                 {
                     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -73,7 +75,7 @@ namespace Bfm.Diet.Web.Api
                             var sid = int.Parse(
                                 claimsIdentity?.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Sid)?.Value
                                 ?? throw new InvalidOperationException());
-                       
+
                             var user = await userService.FirstOrDefaultAsync(sid);
                             if (user == null)
                                 context.Fail("Unauthorized");
@@ -102,7 +104,7 @@ namespace Bfm.Diet.Web.Api
                         ValidateLifetime = true
                     };
                 });
-            services.AddLogging();
+
 
             DietMapper.Initialize(new MapperConfiguration(cfg => { cfg.AddProfile<DietMapperProfile>(); }));
 
@@ -154,19 +156,27 @@ namespace Bfm.Diet.Web.Api
                 });
             });
 
-            services.AddLogging(loggerBuilder =>
-            {
-                loggerBuilder.ClearProviders();
-                loggerBuilder.BfmFileLogger(opt =>
-                {
-                    Configuration.GetSection("AppSettings:LoggingSettings").Get<LoggingSettings>();
-                });
-            });
+            //services.AddLogging(config =>
+            //{
+            //    config.ClearProviders();
+            //    config.AddDebug();
+            //    config.AddEventSourceLogger();
+            //    config.AddConfiguration(Configuration.GetSection("AppSettings:LoggingSettings"));
+            //    config.BfmFileLogger(opt =>
+            //    {
+            //        Configuration.GetSection("AppSettings:LoggingSettings").Get<LoggingSettings>();
+            //    });
+            //    if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == Environments.Development)
+            //        config.AddConsole();
+            //});
+
             services.AddOptions();
             services.AddDependencyResolvers(new ICoreModule[]
             {
                 new DietCoreModule()
             });
+             
+
         }
 
 
@@ -198,11 +208,10 @@ namespace Bfm.Diet.Web.Api
                 });
 
             app.UseRouting();
-
+            app.AddBfmSerilogMiddleware();
             app.UseAuthentication();
-
             app.UseAuthorization();
-
+            app.UseSerilogRequestLogging();
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }

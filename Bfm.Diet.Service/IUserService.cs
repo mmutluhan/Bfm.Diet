@@ -1,15 +1,18 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Bfm.Diet.Authorization.Model;
+using Bfm.Diet.Core.Attributes;
 using Bfm.Diet.Core.Repository;
 
 namespace Bfm.Diet.Service
 {
-    public interface IUserService : IRepository<Kullanici, int>
+    public interface IUserService : IRepository<Kullanici, int>, IBusinessService
     {
-        new List<Kullanici> GetAllList();
+        [Cache(Lifetime = 10)]
+        [Log]
+        Kullanici GetKullaniciByEMail(string email);
 
-        new Kullanici FirstOrDefault(int id);
-        new Task<Kullanici> FirstOrDefaultAsync(int id);
+        [Cache(Lifetime = 300)]
+        [Log]
+        Task<Kullanici> GetKullaniciByEMailAsync(string email);
     }
 }

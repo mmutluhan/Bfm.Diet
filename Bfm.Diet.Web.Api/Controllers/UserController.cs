@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Bfm.Diet.Authorization.Model;
 using Bfm.Diet.Core.Controller;
 using Bfm.Diet.Core.Response;
+using Bfm.Diet.Core.Security.Hashing;
 using Bfm.Diet.Dto.Authorization;
 using Bfm.Diet.Dto.Extensions;
 using Bfm.Diet.Service;
@@ -45,6 +46,9 @@ namespace Bfm.Diet.Web.Api.Controllers
         {
             try
             {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
+
                 var user = _userService.FirstOrDefault(x => x.Id == id);
                 var result = user.Map<Kullanici, KullaniciDto>();
                 var response = new SuccessDataResponse<KullaniciDto>(result);
@@ -62,8 +66,11 @@ namespace Bfm.Diet.Web.Api.Controllers
         {
             try
             {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
+
                 var user = kullanici.Map<KullaniciDto, Kullanici>();
-                _userService.Insert(user); 
+                _userService.Insert(user);
                 var result = user.Map<Kullanici, KullaniciDto>();
                 var response = new SuccessDataResponse<KullaniciDto>(result);
                 return Ok(response);
@@ -81,6 +88,9 @@ namespace Bfm.Diet.Web.Api.Controllers
             try
             {
                 var user = kullanici.Map<KullaniciDto, Kullanici>();
+                Hashing.CreatePasswordHash(kullanici.Parola, out var passwordHash, out var passwordSalt);
+                user.PasswordHash = passwordHash;
+                user.PasswordSalt = passwordSalt;
                 _userService.Update(user);
                 var result = user.Map<Kullanici, KullaniciDto>();
                 var response = new SuccessDataResponse<KullaniciDto>(result);
@@ -98,7 +108,7 @@ namespace Bfm.Diet.Web.Api.Controllers
         {
             try
             {
-                _userService.Delete(u => u.Id == id); 
+                _userService.Delete(u => u.Id == id);
                 var response = new SuccessDataResponse<string>(id + ", Kullanci silindi");
                 return Ok(response);
             }

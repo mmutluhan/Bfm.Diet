@@ -2,10 +2,8 @@
 using Autofac;
 using Autofac.Extras.DynamicProxy;
 using Bfm.Diet.Core.Interceptor;
-using Bfm.Diet.Core.Interceptor.Attributes;
 using Bfm.Diet.Core.Services;
 using Bfm.Diet.Service;
-using Castle.DynamicProxy;
 
 namespace Bfm.Diet.Web.Api.Modules
 {
@@ -13,22 +11,20 @@ namespace Bfm.Diet.Web.Api.Modules
     {
         protected override void Load(ContainerBuilder builder)
         {
-
             var assembly = typeof(ISabitTanimService).Assembly;
-            builder.RegisterAssemblyTypes(assembly)
-                .Where(t => t.Name.EndsWith("Service"))
-                .AsImplementedInterfaces();
 
-            var customProxyGenerationOptions = new ProxyGenerationOptions() { Selector = new CustomInterceptionSelector() };
-            builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces()
-                .EnableInterfaceInterceptors(customProxyGenerationOptions)
-                .InterceptedBy(typeof(WriteLog))
-                .InterceptedBy(typeof(CacheResults));
+            builder.RegisterAssemblyTypes(assembly)
+                .Where(t => t.IsClass && t.Name.EndsWith("Service"))
+                .AsImplementedInterfaces()
+                .EnableInterfaceInterceptors()
+                .InterceptedBy(typeof(CachingInterceptor), typeof(LoggingInterceptor))
+                .InstancePerLifetimeScope();
+
 
             builder.Register((pi, c) =>
             {
                 var sbtService = pi.Resolve<ISabitTanimDetayService>();
-                var sbt = sbtService.GetAllList(o => o.SabitTanim.Adi == "MAIL_SABITLERI").ToList();
+                var sbt = sbtService.GetMailSabitleri();
                 var mailConfig = new MailConfiguration();
                 if (sbt.Count > 0)
                 {
@@ -46,7 +42,7 @@ namespace Bfm.Diet.Web.Api.Modules
                 }
 
                 return new MailService(mailConfig);
-            }).As<IMailService>();
+            }).As<IMailService>().SingleInstance();
         }
     }
 }

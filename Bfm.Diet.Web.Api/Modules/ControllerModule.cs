@@ -1,4 +1,4 @@
-﻿using Autofac; 
+﻿using Autofac;
 
 namespace Bfm.Diet.Web.Api.Modules
 {
@@ -6,8 +6,8 @@ namespace Bfm.Diet.Web.Api.Modules
     {
         protected override void Load(ContainerBuilder builder)
         {
-           // builder.RegisterType<ActionResultCacheFilter>().AsSelf().SingleInstance();
-           base.Load(builder);
+            // builder.RegisterType<ActionResultCacheFilter>().AsSelf().SingleInstance();
+            base.Load(builder);
         }
     }
 }

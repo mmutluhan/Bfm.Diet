@@ -10,6 +10,7 @@ namespace Bfm.Diet.Web.Api.Modules
         {
             builder.RegisterType<MailConfiguration>().AsSelf().SingleInstance();
             builder.RegisterType<TokenOptions>().AsSelf().SingleInstance();
+
             base.Load(builder);
         }
     }

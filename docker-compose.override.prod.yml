@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  bfm.diet.web.api:
+    environment: 
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://0.0.0.0:5500
+    ports:
+      - "5500"

@@ -74,12 +74,13 @@ namespace Bfm.Diet.Core.EntityFrameworkCore.Repository
         public override IQueryable<TEntity> GetAllIncluding(
             params Expression<Func<TEntity, object>>[] propertySelectors)
         {
+            using var transaction = Context.Database.BeginTransaction();
             var query = Table.AsQueryable();
-
             if (!propertySelectors.IsNullOrEmpty())
                 foreach (var propertySelector in propertySelectors)
                     query = query.Include(propertySelector);
-
+            Context.SaveChanges();
+            transaction.Commit();
             return query;
         }
 

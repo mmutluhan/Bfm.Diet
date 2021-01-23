@@ -28,3 +28,17 @@ C:\Users\dtmmutluhan\Desktop\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.dl
 C:\Users\dtmmutluhan\Desktop\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\ref\Bfm.Diet.Core.dll
 C:\Users\dtmmutluhan\Desktop\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.pdb
 C:\Users\dtmmutluhan\Desktop\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.genruntimeconfig.cache
+C:\projects\Bfm\Bfm.Diet.Core\bin\Debug\net5.0\Bfm.Diet.Core.deps.json
+C:\projects\Bfm\Bfm.Diet.Core\bin\Debug\net5.0\Bfm.Diet.Core.runtimeconfig.json
+C:\projects\Bfm\Bfm.Diet.Core\bin\Debug\net5.0\Bfm.Diet.Core.runtimeconfig.dev.json
+C:\projects\Bfm\Bfm.Diet.Core\bin\Debug\net5.0\Bfm.Diet.Core.dll
+C:\projects\Bfm\Bfm.Diet.Core\bin\Debug\net5.0\ref\Bfm.Diet.Core.dll
+C:\projects\Bfm\Bfm.Diet.Core\bin\Debug\net5.0\Bfm.Diet.Core.pdb
+C:\projects\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.AssemblyInfoInputs.cache
+C:\projects\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.AssemblyInfo.cs
+C:\projects\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.csproj.CoreCompileInputs.cache
+C:\projects\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.dll
+C:\projects\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\ref\Bfm.Diet.Core.dll
+C:\projects\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.pdb
+C:\projects\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.genruntimeconfig.cache

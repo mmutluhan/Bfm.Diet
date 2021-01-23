@@ -8,7 +8,9 @@ namespace Bfm.Diet.Core.Json
         {
             ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
             PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-            TypeNameHandling = TypeNameHandling.All
+            TypeNameHandling = TypeNameHandling.All,
+            NullValueHandling = NullValueHandling.Include,
+            TypeNameAssemblyFormatHandling = TypeNameAssemblyFormatHandling.Full
         };
     }
 }

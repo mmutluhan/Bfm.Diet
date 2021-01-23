@@ -2,6 +2,7 @@
 using Bfm.Diet.Authorization.Messages;
 using Bfm.Diet.Authorization.Model;
 using Bfm.Diet.Authorization.Service;
+using Bfm.Diet.Core.Attributes;
 using Bfm.Diet.Core.Exceptions;
 using Bfm.Diet.Core.Security.Hashing;
 using Bfm.Diet.Core.Security.Jwt;
@@ -11,6 +12,7 @@ using Bfm.Diet.Dto.Extensions;
 
 namespace Bfm.Diet.Service.Authorization
 {
+    [Log]
     public class AuthService : IAuthService
     {
         private readonly IMailService _mailService;
@@ -24,28 +26,10 @@ namespace Bfm.Diet.Service.Authorization
             _mailService = mailService;
         }
 
-        public KullaniciDto Login(LoginUserDto loginUser)
+        public async Task<KullaniciDto> Login(LoginUserDto loginUser)
         {
-            #region close
-
-            //if (_userService.Count() == 0)
-            //{
-            //    Hashing.CreatePasswordHash("123456", out var hashByte, out var saltByte);
-            //    _userService.Insert(new Kullanici()
-            //    {
-            //        Adi = "Mehmet",
-            //        Soyadi = "Mutlu",
-            //        Durum = true,
-            //        Email = "mmutluhan@gmail.com",
-            //        PasswordSalt = saltByte,
-            //        PasswordHash = hashByte
-            //    });
-
-            //}
-
-            #endregion
-
-            var result = _userService.FirstOrDefault(u => u.Email == loginUser.Kullanici && u.Durum && u.Adi=="Mehmet Ali" && u.Soyadi == "Mutluhan" );
+            //var result = _userService.GetKullaniciByEMail(loginUser.Kullanici); 
+            var result = await _userService.GetKullaniciByEMailAsync(loginUser.Kullanici);
             if (result == null)
                 throw new ApplicationException(Error.UserNotFound);
 
@@ -55,7 +39,7 @@ namespace Bfm.Diet.Service.Authorization
             if (!result.Durum)
                 throw new ApplicationException(Error.UserAccountNotActive);
             var user = result.Map<Kullanici, KullaniciDto>();
-            return user;
+            return await Task.FromResult(user);
         }
 
         public KullaniciDto Register(KullaniciKayitDto kullanici)

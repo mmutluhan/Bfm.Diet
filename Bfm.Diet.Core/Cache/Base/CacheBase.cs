@@ -79,6 +79,7 @@ namespace Bfm.Diet.Core.Cache.Base
             return Task.FromResult(0);
         }
 
+
         public abstract void Remove(string key);
 
         public virtual Task RemoveAsync(string key)
@@ -97,6 +98,21 @@ namespace Bfm.Diet.Core.Cache.Base
 
         public virtual void Dispose()
         {
+        }
+
+        public abstract T Get<T>(string key, bool remove);
+        public abstract Task<T> GetAsync<T>(string key, bool remove);
+        public abstract T GetOrAdd<T>(string key, Func<T> operation, int lifetime, bool refresh);
+        public abstract Task<T> GetOrAddAsync<T>(string key, Func<Task<T>> operation, int lifetime, bool refresh);
+
+        public abstract void Set<T>(string key, object value, TimeSpan? slidingExpireTime = null,
+            TimeSpan? absoluteExpireTime = null);
+
+        public virtual Task SetAsync<T>(string key, object value, TimeSpan? slidingExpireTime = null,
+            TimeSpan? absoluteExpireTime = null)
+        {
+            Set<T>(key, value, slidingExpireTime);
+            return Task.FromResult(0);
         }
     }
 }
