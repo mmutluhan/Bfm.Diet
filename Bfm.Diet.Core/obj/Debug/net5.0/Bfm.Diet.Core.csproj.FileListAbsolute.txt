@@ -42,3 +42,4 @@ C:\projects\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.dll
 C:\projects\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\ref\Bfm.Diet.Core.dll
 C:\projects\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.pdb
 C:\projects\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.genruntimeconfig.cache
+C:\projects\Bfm\Bfm.Diet.Core\obj\Debug\net5.0\Bfm.Diet.Core.csprojAssemblyReference.cache

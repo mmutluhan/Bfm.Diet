@@ -6,4 +6,4 @@ services:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://0.0.0.0:5500
     ports:
-      - "5500"
+      - 5500:5500
