@@ -5,7 +5,7 @@ services:
     command: "redis-server /usr/local/etc/redis/redis.conf"
     image: "redis:alpine"
     ports: 
-      - "6379:6379"
+      - "6479:6479"
     restart: on-failure
     volumes: 
       - "./data:/data"
