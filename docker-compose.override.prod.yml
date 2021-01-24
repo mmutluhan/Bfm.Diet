@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  bfm.diet.web.api:
+  bfmdietwebapi:
     environment: 
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://0.0.0.0:5500

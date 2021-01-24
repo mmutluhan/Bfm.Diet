@@ -1,19 +1,16 @@
 version: '3.4'
 
 services:
-  bfm.diet.web.redis: 
-    command: "redis-server /usr/local/etc/redis/redis.conf"
+  bfmdietwebredis: 
     image: "redis:alpine"
     ports: 
-      - "6479:6479"
+      - "6379:6379"
+   
     restart: on-failure
     volumes: 
-      - "./data:/data"
-      - "./redis.conf:/usr/local/etc/redis/redis.conf"
-
+      - "./data:/data"       
     networks:
-      bfm_network:
-        ipv4_address: 172.40.0.20
+      - bfm_network
         
   elasticsearch:  
    container_name: elasticsearch  
@@ -28,8 +25,7 @@ services:
     - "ES_JAVA_OPTS=-Xms512m -Xmx512m"  
     - discovery.type=single-node  
    networks:  
-     bfm_network:
-       ipv4_address: 172.40.0.30 
+     - bfm_network
   
   kibana:  
    container_name: kibana  
@@ -41,23 +37,19 @@ services:
    environment:  
     - ELASTICSEARCH_URL=http://localhost:9200  
    networks:  
-    bfm_network:
-       ipv4_address: 172.40.0.40 
+    - bfm_network
     
-  bfm.diet.web.api:
+  bfmdietwebapi:
     image: bfmdietwebapi
     build:
       context: .
       dockerfile: Bfm.Diet.Web.Api/Dockerfile
-    networks: 
+    networks:
       - bfm_network
-            
+                   
 volumes:  
   elasticsearch-data:  
   
 networks:
   bfm_network:
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.40.0.0/16
+    driver: bridge
