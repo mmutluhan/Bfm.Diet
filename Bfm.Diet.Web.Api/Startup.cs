@@ -56,7 +56,7 @@ namespace Bfm.Diet.Web.Api
             {
                 options.AddPolicy("CorsPolicy", builder =>
                 {
-                    builder.WithOrigins("http://194.169.120.148:8080", "http://localhost:8080", "http://localhost:4200")
+                    builder.WithOrigins("http://194.169.120.148:5500", "http://194.169.120.148:4200", "http://localhost:5500", "http://localhost:4200")
                         .AllowAnyHeader().AllowAnyMethod()
                         .AllowCredentials();
                 });
