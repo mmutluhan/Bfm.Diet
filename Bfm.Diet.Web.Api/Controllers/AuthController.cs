@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Bfm.Diet.Authorization.Messages;
 using Bfm.Diet.Core.Controller;
 using Bfm.Diet.Core.Response;
-using Bfm.Diet.Core.Security.Jwt;
 using Bfm.Diet.Dto.Authorization;
 using Bfm.Diet.Service.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -30,11 +29,11 @@ namespace Bfm.Diet.Web.Api.Controllers
                     return BadRequest(ModelState);
 
                 var result = await _authService.RegisterAsync(kullanici);
-                return Ok(new SuccessDataResponse<KullaniciDto>(result));
+                return Ok(new SuccessDataResponse<KullaniciDto>(result, Success.UserRegistrationSuccessful));
             }
             catch (Exception ex)
             {
-                return BadRequest(new ErrorResponse(ex.Message));
+                return BadRequest(new ErrorResponse(ex.Message, Error.UserRegistrationFailed));
             }
         }
 
@@ -50,8 +49,12 @@ namespace Bfm.Diet.Web.Api.Controllers
                 var result = await _authService.CreateAccessTokenAsync(user);
                 if (string.IsNullOrEmpty(result.Token))
                     throw new ApplicationException(Error.TokenCreationError);
-
-                return Ok(new SuccessDataResponse<AccessToken>(result));
+                var loginResult = new LoginUserResultDto
+                {
+                    AccessToken = result,
+                    Kullanici = user
+                };
+                return Ok(new SuccessDataResponse<LoginUserResultDto>(loginResult));
             }
             catch (Exception ex)
             {

@@ -54,8 +54,12 @@ namespace Bfm.Diet.Web.Api
             services.Configure<AppSettings>(options => sections.Bind(options));
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowOrigin",
-                    builder => builder.WithOrigins("http://localhost:3000"));
+                options.AddPolicy("CorsPolicy", builder =>
+                {
+                    builder.WithOrigins("http://194.169.120.148:8080", "http://localhost:8080", "http://localhost:4200")
+                        .AllowAnyHeader().AllowAnyMethod()
+                        .AllowCredentials();
+                });
             });
 
             services.AddHttpContextAccessor();
@@ -198,8 +202,8 @@ namespace Bfm.Diet.Web.Api
             if (env.IsDevelopment()) app.UseDeveloperExceptionPage();
 
             app.UseHttpsRedirection();
-
-            app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader());
+             
+            app.UseCors("CorsPolicy");
 
             app.UseSwagger()
                 .UseSwaggerUI(c =>

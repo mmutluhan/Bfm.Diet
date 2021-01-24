@@ -27,6 +27,15 @@ namespace Bfm.Diet.Service
             }
         }
 
+        public override void Delete(int id)
+        {
+            using (_unitOfWork.BeginTransaction())
+            {
+                base.Delete(id);
+                _unitOfWork.Commit();
+            }
+        }
+
         public override async Task<Kullanici> UpdateAsync(Kullanici entity)
         {
             using (_unitOfWork.BeginTransactionAsync())
